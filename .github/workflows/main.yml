@@ -26,10 +26,6 @@ jobs:
       - run: flutter pub get
       - run: flutter test
       - run: flutter build apk --release
-      - name: Remove latest release
-        uses: liudonghua123/delete-release-action@v1
-        with:
-          release_name: 'latest'
       - name: Push to Releases
         uses: ncipollo/release-action@v1
         with:
